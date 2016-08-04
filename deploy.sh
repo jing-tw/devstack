@@ -6,7 +6,7 @@ apt-get -y --force-yes install git
 echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # stack user
-username='test7'
+username='stack'
 sudo adduser $username --disabled-password --gecos "First Last,RoomNumber,WorkPhone,HomePhone"
 echo "$username:1234" | sudo chpasswd
 
