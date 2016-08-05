@@ -3,6 +3,7 @@
 # Environment
 apt-get update
 apt-get -y --force-yes install git
+apt-get 0u --force-yes install  sshpass
 echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # stack user
