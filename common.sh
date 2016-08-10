@@ -8,3 +8,6 @@ sudo apt-get -y --force-yes install  sshpass
 vagrant up
 
 #ssh-copy-id stack@$ip
+
+# use google dns server
+sshpass -p 1234 ssh -o StrictHostKeyChecking=no -t stack@$ip "echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf"

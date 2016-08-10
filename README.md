@@ -1,12 +1,17 @@
 #devstack
 
-## deploy
+## Automatically Deploy
+```bash
+[host]. ./02_vagrant_up_gnocchi.sh
+```
+## Manualy Deploy
 ``` bash
-vagrant up && vagrant ssh
-sudo su stack  #passwd=1234
+[host] vagrant up && vagrant ssh
+[guest] sudo su stack  #passwd=1234
+[guest] cd ~\devstack
 ```
 
-## install plug-in
+## plug-in
 ### ceilometer
 ```bash
 # in local.conf
@@ -14,3 +19,5 @@ enable_plugin gnocchi https://github.com/openstack/gnocchi master
 enable_service gnocchi-api,gnocchi-metricd
 enable_service gnocchi-grafana
 ```
+
+[guest] . ./stack.sh
